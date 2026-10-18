@@ -492,8 +492,8 @@ lazy val schema = crossProject(JSPlatform, JVMPlatform)
     libraryDependencies ++= Seq(
       "io.github.cquiroz" %%% "scala-java-time"            % "2.6.0",
       "io.github.cquiroz" %%% "scala-java-time-tzdb"       % "2.6.0",
-      "io.github.cquiroz" %%% "scala-java-locales"         % "1.5.4" % Test,
-      "io.github.cquiroz" %%% "locales-full-currencies-db" % "1.5.4" % Test
+      "io.github.cquiroz" %%% "scala-java-locales"         % "1.6.0" % Test,
+      "io.github.cquiroz" %%% "locales-full-currencies-db" % "1.6.0" % Test
     ) ++ (CrossVersion.partialVersion(scalaVersion.value) match {
       case Some((2, _)) =>
         Seq()
@@ -834,8 +834,8 @@ lazy val `schema-messagepack` = crossProject(JSPlatform, JVMPlatform)
     Compile / scalaJSLinkerConfig ~= (_.withOptimizer(false).withParallel(false)),
     Test / scalaJSLinkerConfig ~= (_.withOptimizer(false).withParallel(false)),
     libraryDependencies ++= Seq(
-      "io.github.cquiroz" %%% "scala-java-locales"         % "1.5.4" % Test,
-      "io.github.cquiroz" %%% "locales-full-currencies-db" % "1.5.4" % Test
+      "io.github.cquiroz" %%% "scala-java-locales"         % "1.6.0" % Test,
+      "io.github.cquiroz" %%% "locales-full-currencies-db" % "1.6.0" % Test
     )
   )
 
@@ -868,8 +868,8 @@ lazy val `schema-toon` = crossProject(JSPlatform, JVMPlatform)
   )
   .jsSettings(
     libraryDependencies ++= Seq(
-      "io.github.cquiroz" %%% "scala-java-locales"         % "1.5.4" % Test,
-      "io.github.cquiroz" %%% "locales-full-currencies-db" % "1.5.4" % Test
+      "io.github.cquiroz" %%% "scala-java-locales"         % "1.6.0" % Test,
+      "io.github.cquiroz" %%% "locales-full-currencies-db" % "1.6.0" % Test
     ) ++ (CrossVersion.partialVersion(scalaVersion.value) match {
       case Some((2, _)) =>
         Seq()
@@ -965,8 +965,8 @@ lazy val `schema-csv` = crossProject(JSPlatform, JVMPlatform)
   )
   .jsSettings(
     libraryDependencies ++= Seq(
-      "io.github.cquiroz" %%% "scala-java-locales"         % "1.5.4" % Test,
-      "io.github.cquiroz" %%% "locales-full-currencies-db" % "1.5.4" % Test
+      "io.github.cquiroz" %%% "scala-java-locales"         % "1.6.0" % Test,
+      "io.github.cquiroz" %%% "locales-full-currencies-db" % "1.6.0" % Test
     )
   )
 
@@ -1093,8 +1093,8 @@ lazy val zioGolemCoreJS = project
       "dev.zio"           %%% "zio-test-sbt"               % "2.1.26" % Test,
       "io.github.cquiroz" %%% "scala-java-time"            % "2.6.0"  % Test,
       "io.github.cquiroz" %%% "scala-java-time-tzdb"       % "2.6.0"  % Test,
-      "io.github.cquiroz" %%% "scala-java-locales"         % "1.5.4"  % Test,
-      "io.github.cquiroz" %%% "locales-full-currencies-db" % "1.5.4"  % Test
+      "io.github.cquiroz" %%% "scala-java-locales"         % "1.6.0"  % Test,
+      "io.github.cquiroz" %%% "locales-full-currencies-db" % "1.6.0"  % Test
     ),
     Compile / unmanagedSourceDirectories ++= {
       val base = baseDirectory.value / "src" / "main"
